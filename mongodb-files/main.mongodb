@@ -1,0 +1,252 @@
+const database = 'QuanLyDichVuXeKhach';
+const EmployeesCollection = 'employees';
+const CustomersCollection = "customers";
+const CoachTripCollection = "coachtrips";
+const CoachTicketsCollection = "coachtickets";
+
+use(database);
+
+db.employees.drop();
+db.customers.drop();
+db.coachtrips.drop();
+db.coachtickets.drop();
+
+// Create a new collection.
+db.createCollection(EmployeesCollection);
+db.createCollection(CustomersCollection);
+db.createCollection(CoachTripCollection);
+db.createCollection(CoachTicketsCollection);
+
+
+//Conductor: nhân viên bán vé
+//Employer: chủ
+//Assistant dirver: Nhân viên hỗ trợ cho tài xế (tài xế phụ).
+//Collaborator: Cộng tác viên.
+
+db.employees.insertMany([
+  {
+    "username": "nguyenvana",
+    "fullName": "Nguyễn Văn A",
+    "phone": "023094892045",
+    "email": "nguyenvana@xxx.com",
+    "gender": "Nam",
+    "birthday": new Date("1998-03-02"),
+    "avatar": "",
+    "address": "Hồ Chí Minh",
+    "title": "Coach Driver",
+    "password": "1234"
+  },
+  {
+    "username": "nguyenthib",
+    "fullName": "Nguyễn Thị B",
+    "phone": "01677408262",
+    "email": "nguyenthib@xxx.com",
+    "gender": "Nữ",
+    "birthday": new Date("1999-02-03"),
+    "avatar": "",
+    "address": "Hồ Chí Minh",
+    "title": "Conductor",
+    "password": "1234"
+  },
+  {
+    "username": "truongvanc",
+    "fullName": "Trương Văn C",
+    "phone": "0377408264",
+    "email": "truongvanc@xxx.com",
+    "gender": "Nam",
+    "birthday": new Date("1997-04-02"),
+    "avatar": "",
+    "address": "Hồ Chí Minh",
+    "title": "Assistant dirver",
+    "password": "1234"
+  },
+  {
+    "username": "lethid",
+    "fullName": "Lê Thị D",
+    "phone": "034855261",
+    "email": "lethid@xxx.com",
+    "gender": "Nữ",
+    "birthday": new Date("1996-05-15"),
+    "avatar": "",
+    "address": "Hồ Chí Minh",
+    "title": "Conductor",
+    "password": "1234"
+  },
+  {
+    "username": "admin1",
+    "fullName": "Quản trị viên 1",
+    "phone": "2345674543",
+    "email": "admin1@xxx.com",
+    "gender": "Nam",
+    "birthday": new Date("1996-06-26"),
+    "avatar": "",
+    "address": "Hồ Chí Minh",
+    "title": "Employer",
+    "password": "1234"
+  }
+])
+
+db.customers.insertMany([
+  {
+    "fullName": "Nguyễn Văn A",
+    "phone": "023094892045",
+    "email": "nguyenvana@xxx.com",
+    "address": "Hồ Chí Minh",
+    "birthday": new Date("1996-06-26"),
+    "gender": "Nam",
+    "password": "12345",
+    "bankAccountName": "NGUYEN VAN A",
+    "backAccoutNumber": "3294568576894576895474",
+    "cardNumber": "325983409805386456845",
+    "cardExpirationDate": "04/24",
+    "momoAccount": "023094892045",
+  },
+  {
+    "fullName": "Trương Thị Bé",
+    "phone": "01477405261",
+    "email": "truongthibe@xxx.com",
+    "address": "Huế",
+    "birthday": new Date("1995-02-24"),
+    "gender": "Nữ",
+    "password":"12345",
+    "bankAccountName": "TRUONG THI BE",
+    "backAccoutNumber": "3265626568562659895656",
+    "cardNumber": "23454656541645124133",
+    "cardExpirationDate": "05/25",
+    "momoAccount": "01477405261",
+  },
+  {
+    
+    "fullName": "Nguyễn Thị Lệnh Thư",
+    "phone": "01654255165",
+    "email": "truongthibe@xxx.com",
+    "address": "Huế",
+    "birthday": new Date("2001-02-28"),
+    "gender": "Nữ",
+    "password":"12345",
+    "bankAccountName": "NGUYEN THI LENH THU",
+    "backAccoutNumber": "55454646845465462135",
+    "cardNumber": "15646546685644546",
+    "cardExpirationDate": "05/21",
+    "momoAccount": "01654255165",
+  },
+  {
+    "fullName": "Nguyễn Quốc Đạt",
+    "phone": "01477403451",
+    "email": "nguyenquocdat@xxx.com",
+    "address": "Huế",
+    "birthday": new Date("1998-12-24"),
+    "gender": "Nam",
+    "password":"12345",
+    "bankAccountName": "NGUYEN QUOC DAT",
+    "backAccoutNumber": "326562235467856766",
+    "cardNumber": "2342345644645124133",
+    "cardExpirationDate": "09/24",
+    "momoAccount": "01477403451",
+  },
+    {
+    "fullName": "Lê Thanh Bình",
+    "phone": "014774678334",
+    "email": "lethanhbinh@xxx.com",
+    "address": "Đăk Lăk",
+    "birthday": new Date("1999-09-12"),
+    "gender": "Nam",
+    "password":"12345",
+    "bankAccountName": "ELE THANH BINH",
+    "backAccoutNumber": "312356223353654666",
+    "cardNumber": "23423245678879453",
+    "cardExpirationDate": "09/26",
+    "momoAccount": "014774678334",
+  },
+    {
+    "fullName": "Nguyễn Văn Danh",
+    "phone": "0349454545",
+    "email": "nguuyenvandanh@xxx.com",
+    "address": "Gia Lai",
+    "birthday": new Date("2000-04-24"),
+    "gender": "Nam",
+    "password":"12345",
+    "bankAccountName": "NGUYEN VAN DANH",
+    "backAccoutNumber": "3548468468110187",
+    "cardNumber": "3659188505920352",
+    "cardExpirationDate": "09/25",
+    "momoAccount": "0349454545",
+  },
+])
+
+db.coachtrips.insertMany([{
+  "code": "HCMTN_01",
+  "name": "Bến Xe Miền Đông, Hồ Chí Minh -> TP.Pleiku, Gia Lai [12/04/2022][51B 889.88]",
+  "departureTime": new Date("2022-04-15T17:45:42.389Z"),
+  "destinationTime": new Date("2022-04-16T05:30:42.389Z"),
+  "Coach": {
+    "name": "Xe 51B 889.88",
+		"seatNumber": 40,
+		"licensePlate": "51B 889.88",
+  },
+  "Route": {
+    "name": "Bến Xe Miền Đông, Hồ Chí Minh -> TP.Pleiku, Gia Lai",
+    "price": 300000,
+  }
+}])
+
+db.coachtickets.insertMany([{
+  "Customer": {
+    "customerName": "Nguyễn Văn Danh",
+    "gender": "Nam",
+    "email": "nguuyenvandanh@xxx.com",
+    "phone": "0349454545"
+  },
+  "Employees": [
+    {
+      "username": "nguyenvana",
+      "title": "Coach Driver"
+    },
+    {
+      "username": "lethid",
+      "title": "Conductor"
+    },
+    {
+      "username": "truongvanc",
+      "title": "Assistant dirver"
+    }
+  ],
+	"TicketsDetails":[
+    {
+      "seatPosition": "1A",
+      "price": 300000,
+      "subCharge": 10000,
+      "note": "Có hành lý (vali) trên 10kg",
+      "intoMoney": 310000
+    },
+    {
+      "seatPosition": "2B",
+      "price": 300000,
+      "subCharge": 0,
+      "note": "",
+      "intoMoney": 300000
+    }
+  ],
+  "CoachTrip": {
+    "code": "HCMTN_01",
+    "name": "Bến Xe Miền Đông, Hồ Chí Minh -> TP.Pleiku, Gia Lai [12/04/2022][51B 889.88]",
+    "departureTime": new Date("2022-04-15T17:45:42.389Z"),
+    "destinationTime": new Date("2022-04-16T05:30:42.389Z"),
+    "Coach": {
+      "seatNumber": 40,
+      "licensePlate": "51B 889.88"
+    },
+    "Route": {
+      "name": "Bến Xe Miền Đông, Hồ Chí Minh -> TP.Pleiku, Gia Lai",
+      "price": 300000,
+    }
+  },
+  "purchaseDate": new Date("2022-04-12"),
+  "Payment": {
+    "paymentMethod": "Bank transfer",
+    "status": "success",
+    "transactionContent": "AX97BC"
+  },
+  "totalMoney": 610000
+}]);
+

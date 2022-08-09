@@ -1,0 +1,259 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Thông tin  vé: "{{coachTicketID}}"</h3>
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                 <h4 class="m-3 text-success">Thông tin khách hàng</h4>
+            <div class="col-sm-12 col-md-12 col-lg-12 order-2 order-md-1">
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Tên khách hàng:</span>
+                                <span class="info-box-number text-center text-muted mb-0">{{Customer.customerName}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Giới tính:</span>
+                                <span class="info-box-number text-center text-muted mb-0">{{Customer.gender}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Email:</span>
+                                <span
+                                    class="info-box-number text-center text-muted mb-0">{{Customer.email}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Điện thoại:</span>
+                                <span
+                                    class="info-box-number text-center text-muted mb-0">{{Customer.phone}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="m-3 text-success">Thông tin nhân viên</h4>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Tên nhân viên:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{Employees.username}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Chức vụ:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{Employees.tiltle}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="m-3 text-success">Chi tiết vé xe</h4>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Số ghế ngồi:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{TicketsDetails.seatPosition}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Giá vé:</span>
+                        <span
+                            class="info-box-number text-center text-muted mb-0">{{TicketsDetails.price}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Phụ thu:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{TicketsDetails.subCharge}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Ghi chú:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{TicketsDetails.note}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Tổng tiền:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{TicketsDetail.intoMoney}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="m-3 text-success">Thông tin chuyến xe</h4>
+           <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 order-2 order-md-1">
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Mã chuyến xe:</span>
+                                <span class="info-box-number text-center text-muted mb-0">{{coachTrip.code}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Tên chuyến xe:</span>
+                                <span class="info-box-number text-center text-muted mb-0">{{coachTrip.name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Thời gian đi:</span>
+                                <span
+                                    class="info-box-number text-center text-muted mb-0">{{coachTrip.departureTime}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="info-box bg-light">
+                            <div class="info-box-content">
+                                <span class="info-box-text text-center text-muted">Thời gian đến:</span>
+                                <span
+                                    class="info-box-number text-center text-muted mb-0">{{coachTrip.destinationTime}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="m-3 text-success">Thông tin xe</h4>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Tên xe:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{coachTrip.Coach.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Biển số xe:</span>
+                        <span
+                            class="info-box-number text-center text-muted mb-0">{{coachTrip.Coach.licensePlate}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Số ghế ngồi:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{coachTrip.Coach.seatNumber}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <h4 class="m-3 text-success">Thông tin tuyến đường</h4>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Tên tuyến:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{coachTrip.Route.name}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Giá cố định:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{coachTrip.Route.price}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <h4 class="m-3 text-success">Thông tin thanh toán</h4>
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Ngày mua vé:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{cpurchaseDate}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Hình thức thanh toán:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{Payment.paymentMethod}}</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Trạng thái thanh toán:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{Payment.status}}</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Giao dịch:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{Payment.transactionContent}}</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-12 col-sm-4">
+                <div class="info-box bg-light">
+                    <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Thành tiền:</span>
+                        <span class="info-box-number text-center text-muted mb-0">{{totalMoney}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="card-footer">
+        <a href="/admin/coach-ticket/list" class="btn btn-primary">Quay về danh sách</a>
+        <a href="/admin/coach-ticket/edit/{{coachTrip.code}}" class="btn btn-success">Chỉnh sửa</a>
+    </div>
+</div>

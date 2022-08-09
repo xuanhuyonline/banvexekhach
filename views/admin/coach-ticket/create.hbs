@@ -1,0 +1,127 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Thêm vé xe</h3>
+            </div>
+             <div class="card-body">
+                <form style="" method="POST" action="/admin/coach-ticket/create">  
+                <div class="row" style="background-color: antiquewhite;"> 
+                     <div class="form-group col-5" style="text-align: initial">
+                        <label for="name">Tên khách hàng</label>
+                        <input type="text" class="form-control" placeholder="Tên khách hàng" name="Customer.customerName" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Giới tính</label>
+                        <input type="text" class="form-control" placeholder="Giới tính" name="Customer.gender" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Email</label>
+                        <input type="text" class="form-control" placeholder="Email" name="Customer.email" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Phone</label>
+                        <input type="text" class="form-control" placeholder="Phone" name="Customer.phone" />
+                    </div>
+                </div>
+                  <div class="row" style="background-color: aquamarine;"> 
+                      <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên nhân viên</label>
+                        <input type="text" class="form-control" placeholder="Tên nhân viên" name="Employees.username" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Chức vụ</label>
+                        <input type="text" class="form-control" placeholder="Chức vụ" name="Employees.title" />
+                    </div>
+                </div>
+                  <div class="row" style="background-color: beige;">            
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Ghế xe</label>
+                        <input type="text" class="form-control" placeholder="Ghế xe" name="TicketsDetails.seatPosition" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Giá vé</label>
+                        <input type="text" class="form-control" placeholder="Giá vé" name="TicketsDetails.price" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Phụ thu</label>
+                        <input type="text" class="form-control" placeholder="Phụ thu" name="TicketsDetails.subCharge" />
+                    </div>
+                     <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Ghi chú</label>
+                        <input type="text" class="form-control" placeholder="Ghi chú" name="TicketsDetails.note" />
+                    </div>
+                      <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tổng tiền</label>
+                        <input type="text" class="form-control" placeholder="Tổng tiền" name="TicketsDetails.intoMoney" />
+                    </div>
+                </div>
+                
+                <div class="row" style="background-color: bisque;">
+                    
+                  <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Mã chuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Mã chuyến" name="CoachTrip.code" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên chuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Tên chuyến" name="CoachTrip.name" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Thời gian đi</label>
+                        <input type="Date" class="form-control" placeholder="Thời gian đi" name="CoachTrip.departureTime" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Thời gian đến</label>
+                        <input type="Date" class="form-control" placeholder="Thời gian đến" name="CoachTrip.destinationTime" />
+                    </div>                   
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Số ghế ngồi</label>
+                        <input type="text" class="form-control" placeholder="Số ghế ngồi" name="Coach.seatNumber" />
+                    </div>
+
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Biển số xe</label>
+                        <input type="text" class="form-control" placeholder="Biển số xe" name="Coach.licensePlate" />
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên tuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Tuyến xe" name="Route.name" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Giá tiền</label>
+                        <input type="text" class="form-control" placeholder="Giá tiền" name="Route.price" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Ngày mua vé</label>
+                        <input type="text" class="form-control" placeholder="Ngày mua vé" name="purchaseDate" />
+                    </div>
+                     <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Hình thức thanh toán</label>
+                        <input type="text" class="form-control" placeholder="Hình thức thanh toán" name="Payment.paymentMethod" />
+                    </div>
+                     <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Trạng thái thanh toán</label>
+                        <input type="text" class="form-control" placeholder="Trạng thái thanh toán" name="Payment.status" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Giao dịch</label>
+                        <input type="text" class="form-control" placeholder="Giao dịch" name="Payment.transactionContent" />
+                    </div>
+                       <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Thành tiền</label>
+                        <input type="text" class="form-control" placeholder="Thành tiền" name="totalMoney" />
+                    </div>
+                </div>
+                </form>
+
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Tạo mới</button>
+                    <a href="/admin/coach-ticket/list" class="btn btn-primary">Quay về danh sách</a>
+                </div>
+        </div>
+    </div>
+</div>

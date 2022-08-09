@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Thêm chuyến xe</h3>
+            </div>
+            <form style="text-align: -webkit-center;" method="POST" action="/admin/coach-trip/create">
+                <div class="card-body">
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Mã chuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Mã chuyến" name="code" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên chuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Tên chuyến" name="name" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Thời gian đi</label>
+                        <input type="Date" class="form-control" placeholder="Thời gian đi" name="departureTime" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Thời gian đến</label>
+                        <input type="Date" class="form-control" placeholder="Thời gian đến" name="destinationTime" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên xe</label>
+                        <input type="text" class="form-control" placeholder="Tên xe" name="Coach.name" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Số ghế ngồi</label>
+                        <input type="text" class="form-control" placeholder="Số ghế ngồi" name="Coach.seatNumber" />
+                    </div>
+
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Biển số xe</label>
+                        <input type="text" class="form-control" placeholder="Biển số xe" name="Coach.licensePlate" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Tên tuyến xe</label>
+                        <input type="text" class="form-control" placeholder="Tuyến xe" name="name" />
+                    </div>
+                    <div class="form-group col-5" style="text-align: initial;">
+                        <label for="name">Giá tiền</label>
+                        <input type="text" class="form-control" placeholder="Giá tiền" name="price" />
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Tạo mới</button>
+                    <a href="/admin/coach-trip/list" class="btn btn-primary">Quay về danh sách</a>
+                </div>
+        </div>
+    </div>
+</div>
